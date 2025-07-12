@@ -85,6 +85,11 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  // Function to handle contact representatives click
+  const handleContactReps = () => {
+    window.open('https://contactmyrep.ws/', '_blank', 'noopener,noreferrer')
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       // Track scroll position for scroll-to-top button
@@ -535,12 +540,10 @@ function App() {
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
+                    onClick={handleContactReps}
                     className="bg-green-600 hover:bg-green-700 text-white"
-                    asChild
                   >
-                    <a href="https://contactmyrep.ws/" target="_blank" rel="noopener noreferrer">
-                      Contact Your Representatives
-                    </a>
+                    Contact Your Representatives
                   </Button>
                   <Button 
                     variant="outline" 
