@@ -40,5 +40,21 @@ An interactive educational experience that presents the compelling case for cann
 3. **Economic Opportunity:** Tax revenue and job creation potential
 4. **Public Safety & Health:** Crime reduction and health benefits data
 5. **Agricultural Heritage:** Wisconsin's hemp history and infrastructure
+6. **The Path Forward:** Call to action with representative contact links
+
+---
+
+## 🚀 Deployment
+
+The site is deployed on Netlify and automatically updates when changes are pushed to the main branch.
+
+**Live Site:** https://make-wi-green-again.netlify.app/
+
+---
+
+## 🔗 Action Links
+
+- **Contact Representatives:** https://contactmyrep.ws/
+- **Learn More:** https://kindresources.io/
 
 ---
