@@ -1,4 +1,5 @@
 [build]
+  base = "wi-cannabis-legalization-experience"
   publish = "dist"
   command = "npm run build"
 
