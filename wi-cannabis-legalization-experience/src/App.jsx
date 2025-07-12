@@ -534,8 +534,13 @@ function App() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Contact Your Representatives
+                  <Button 
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                    asChild
+                  >
+                    <a href="https://contactmyrep.ws/" target="_blank" rel="noopener noreferrer">
+                      Contact Your Representatives
+                    </a>
                   </Button>
                   <Button 
                     variant="outline" 
@@ -568,4 +573,3 @@ function App() {
 }
 
 export default App
-
