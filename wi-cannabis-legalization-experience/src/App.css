@@ -1,0 +1,377 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* Kind Oasis Brand Colors */
+  --kind-green: #2D5A3D;
+  --kind-orange: #E67E22;
+  --kind-blue: #3498DB;
+  --kind-brown: #8B4513;
+  --kind-cream: #F8F9FA;
+  --kind-gold: #F39C12;
+  
+  /* Updated theme colors with Kind Oasis palette */
+  --background: #F8F9FA;
+  --foreground: #2D5A3D;
+  --card: #FFFFFF;
+  --card-foreground: #2D5A3D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D5A3D;
+  --primary: #2D5A3D;
+  --primary-foreground: #F8F9FA;
+  --secondary: #E67E22;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F0F0F0;
+  --muted-foreground: #6B7280;
+  --accent: #3498DB;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #E5E7EB;
+  --input: #F3F4F6;
+  --ring: #2D5A3D;
+  --chart-1: #2D5A3D;
+  --chart-2: #E67E22;
+  --chart-3: #3498DB;
+  --chart-4: #F39C12;
+  --chart-5: #8B4513;
+  --sidebar: #F8F9FA;
+  --sidebar-foreground: #2D5A3D;
+  --sidebar-primary: #2D5A3D;
+  --sidebar-primary-foreground: #F8F9FA;
+  --sidebar-accent: #E67E22;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #2D5A3D;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #F8F9FA;
+  --card: #2D2D2D;
+  --card-foreground: #F8F9FA;
+  --popover: #2D2D2D;
+  --popover-foreground: #F8F9FA;
+  --primary: #4A7C59;
+  --primary-foreground: #F8F9FA;
+  --secondary: #FF8C42;
+  --secondary-foreground: #1A1A1A;
+  --muted: #404040;
+  --muted-foreground: #A0A0A0;
+  --accent: #5DADE2;
+  --accent-foreground: #1A1A1A;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #404040;
+  --input: #404040;
+  --ring: #4A7C59;
+  --chart-1: #4A7C59;
+  --chart-2: #FF8C42;
+  --chart-3: #5DADE2;
+  --chart-4: #F7DC6F;
+  --chart-5: #CD853F;
+  --sidebar: #2D2D2D;
+  --sidebar-foreground: #F8F9FA;
+  --sidebar-primary: #4A7C59;
+  --sidebar-primary-foreground: #F8F9FA;
+  --sidebar-accent: #FF8C42;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #404040;
+  --sidebar-ring: #4A7C59;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+/* Custom Wisconsin Cannabis Experience Styles */
+.hero-section {
+  background: linear-gradient(135deg, var(--kind-green) 0%, var(--kind-blue) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background: rgba(45, 90, 61, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.chapter-section {
+  height: 100vh;
+  padding: 1rem 0;
+  padding-top: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.chapter-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 0 1rem;
+}
+
+.next-chapter-container {
+  padding: 1rem 0;
+  flex-shrink: 0;
+}
+
+.chapter-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.wisconsin-shape {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.data-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(45, 90, 61, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.data-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 90, 61, 0.15);
+  border-color: var(--kind-green);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--kind-green);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--kind-brown);
+  font-weight: 500;
+}
+
+.progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--kind-green), var(--kind-orange));
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+.interactive-map {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.state-outline {
+  fill: var(--kind-cream);
+  stroke: var(--kind-green);
+  stroke-width: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.state-outline:hover {
+  fill: var(--kind-green);
+  stroke: var(--kind-orange);
+  stroke-width: 3;
+}
+
+.money-flow {
+  stroke: var(--kind-orange);
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 10, 5;
+  animation: flow 2s linear infinite;
+}
+
+@keyframes flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 15; }
+}
+
+.hemp-leaf {
+  color: var(--kind-green);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.hemp-leaf:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.chapter-nav {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(249, 115, 22, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.nav-dot.active {
+  background: #f97316;
+  transform: scale(1.4);
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+}
+
+.nav-dot:hover {
+  background: #f97316;
+  transform: scale(1.2);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pulse-green {
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(45, 90, 61, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(45, 90, 61, 0);
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .chapter-nav {
+    right: 1rem;
+  }
+  
+  .data-card {
+    padding: 1.5rem;
+  }
+}
+
