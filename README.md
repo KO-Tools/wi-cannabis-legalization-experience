@@ -54,7 +54,14 @@ The site is deployed on Netlify and automatically updates when changes are pushe
 
 ## 🔗 Action Links
 
-- **Contact Representatives:** https://contactmyrep.ws/
+- **Contact Representatives:** https://contactmyrep.ws/ (Updated button functionality)
 - **Learn More:** https://kindresources.io/
+
+---
+
+## 📝 Recent Updates
+
+- Fixed Contact Representatives button to properly open external link
+- Corrected Netlify deployment configuration
 
 ---
