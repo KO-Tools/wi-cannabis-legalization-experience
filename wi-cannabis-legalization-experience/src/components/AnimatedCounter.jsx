@@ -6,7 +6,8 @@ export function AnimatedCounter({
   prefix = '', 
   suffix = '', 
   decimals = 0,
-  className = '' 
+  className = '',
+  disableFormatting = false 
 }) {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
@@ -58,6 +59,9 @@ export function AnimatedCounter({
   }, [isVisible, end, duration])
 
   const formatNumber = (num) => {
+    if (disableFormatting) {
+      return Math.floor(num).toString()
+    }
     if (decimals === 0) {
       return Math.floor(num).toLocaleString()
     }
