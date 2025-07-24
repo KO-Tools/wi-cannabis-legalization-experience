@@ -11,12 +11,12 @@ import kindOasisLogo from './assets/images/kind_oasis_logo_white.png'
 import './App.css'
 
 // Compact StatCard component
-const StatCard = ({ title, value, suffix = '', prefix = '', description, icon: Icon, color = 'green', source }) => (
+const StatCard = ({ title, value, suffix = '', prefix = '', description, icon: Icon, color = 'green', source, disableFormatting = false }) => (
   <Card className="data-card text-center">
     <CardContent className="p-4">
       <Icon className={`w-6 h-6 mx-auto mb-2 text-${color}-600`} />
       <div className="text-2xl font-bold mb-1">
-        <AnimatedCounter end={value} prefix={prefix} suffix={suffix} />
+        <AnimatedCounter end={value} prefix={prefix} suffix={suffix} disableFormatting={disableFormatting} />
       </div>
       <div className="text-sm font-medium mb-2">{title}</div>
       <div className="text-xs text-gray-600 mb-2">{description}</div>
@@ -376,6 +376,7 @@ function App() {
                 icon={Leaf}
                 color="green"
                 source="Wisconsin Historical Society"
+                disableFormatting={true}
               />
               
               <StatCard
@@ -385,6 +386,7 @@ function App() {
                 icon={Briefcase}
                 color="orange"
                 source="Wisconsin State Historical Society Archives"
+                disableFormatting={true}
               />
               
               <StatCard
@@ -394,6 +396,7 @@ function App() {
                 icon={Scale}
                 color="blue"
                 source="Wisconsin Legislature"
+                disableFormatting={true}
               />
               
               <StatCard
