@@ -7,7 +7,7 @@ import { AnimatedCounter } from './components/AnimatedCounter.jsx'
 import { InteractiveWisconsinMap } from './components/InteractiveMap.jsx'
 import { NextChapterButton } from './components/NextChapterButton.jsx'
 import { ProgressBar } from './components/ProgressBar.jsx'
-import kindOasisLogo from './assets/images/kind_oasis_logo_white.png'
+import wccrLogo from './assets/images/wccr_logo_dark.png'
 import './App.css'
 
 // Compact StatCard component
@@ -126,8 +126,8 @@ function App() {
           <div className="container mx-auto px-4 text-center">
             <div className="mb-6">
               <img 
-                src={kindOasisLogo} 
-                alt="Kind Oasis" 
+                src={wccrLogo} 
+                alt="Wisconsin Coalition for Cannabis Reform" 
                 className="h-16 mx-auto mb-8"
               />
             </div>
